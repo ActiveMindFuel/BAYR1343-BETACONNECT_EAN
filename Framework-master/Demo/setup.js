@@ -1,64 +1,59 @@
 (function(global) {
-
+  
   // Creating our presentation and global namespace "app"
   global.app = new Presentation({
-    globalElements: ['mainmenu', 'mainfooter', 'slidePopup', 'popupBackButton'],
-    // isLinear: true, // will display all content horizontally
-    type: 'json'
+    globalElements: ['mainmenu','#pulldown'],
+
+    slideshows: {
+      container:            ['container'],
+      introduction:         ['introduction'],
+      mybetaapp_login:      ['mybetaapp_login'],
+      pairing_betaconnect:  ['pairing_betaconnect'],
+      injection_recording:  ['injection_recording'],
+      calendar:             ['calendar'], 
+      wellness_tracker:     ['wellness_tracker'],
+      sharing_data:         ['sharing_data'],
+      hcp_dashboard:        ['hcp_dashboard'],
+      conclusion:           ['conclusion'],
+    },
+    collections: {
+      default: [
+        'introduction',
+        'mybetaapp_login',
+        'pairing_betaconnect',
+        'injection_recording',
+        'calendar',
+        'wellness_tracker',
+        'sharing_data',
+        'hcp_dashboard',
+        'conclusion',
+      ]
+    },
+    
+    type:'json',
+    manageMemory: true
   });
-  
-  // Making sure we can access contact data
-  ag.data.getCallContacts();
-  
-  // Uncomment to turn on debugging of presentation
-  // Will output logs to the browser console
-  app.debug = (function() {
-    // var api = ag.debug(true); // Debug of Content API
-    // debug(); // Debug of Framework
-    // return api;
-  }());
   
   // Initiate modules
-  app.refs = new References('references', 'refPopup');
-  app.scroller = new Slidescroller();
-  app.analytics.init({
-    version: '5.0',
-    map: {
-      "blue_urine": {
-        "id": "nr_of_patients",
-        "name": "Patients with blue urine"
-      }
-    }
-  });
-  app.slidePopup = new SlidePopup('slidePopup', 'popupBackButton');
-  app.transPopup = new SlidePopup('transPopup');
-  app.track_menu = new Menu({
-    attachTo: 'mechanism',
-    offset: 0,
+  //app.scroller = new Slidescroller();
+  app.analytics.init({ version: '0.1' });
+  app.loader = new Loader({delay:1600});
+  
+  app.menu = new Menu({
+    //attachTo: 'default',
     links: [
-      { title: 'Popup example', goTo: "app.slidePopup.show('blue_urine');"}
-     ],
+      { title: 'Introduction', goTo: 'default.introduction' },
+      { title: 'Login', goTo: 'default.mybetaapp_login' },
+      { title: 'Pairing', goTo: 'default.pairing_betaconnect' },
+      { title: 'Recording', goTo: 'default.injection_recording' },
+      { title: 'Calendar', goTo: 'default.calendar' },
+      { title: 'Wellness', goTo: 'default.wellness_tracker' },
+      { title: 'Sharing', goTo: 'default.sharing_data' },
+      { title: 'Navigator', goTo: 'default.hcp_dashboard' }
+    ]
   });
-  app.menu = new AutoMenu({
-    attachTo: ['placebo', 'efficacy'],
-    offsetLinks: 1,
-    links: {
-      summary:      {title: 'Conclusion'},
-      introduction: {title: ' ', classname: 'home'},
-      blue_urine: {title: 'Blue Urine'}
-    }
-  });
-  app.thumbs = new Thumbnails({
-    attachTo: ['placebo', 'efficacy', 'linear'],
-    pathToThumbs: 'content/img/thumbs/<id>.jpg',
-    hideSingles: true
-  });
-  app.slideOverview = new SlideOverview({
-    attachTo: ['placebo', 'linear'],
-    triggerSelector: "#overview",
-    pathToThumbs: 'content/img/thumbs/<id>.jpg'
-  });
-
+  
   // Initialize presentation
-  app.init("placebo", "introduction");
+  app.init('default');
+  
 })(window);
