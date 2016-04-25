@@ -1,0 +1,16 @@
+{
+	"storyboard" : ["default"],
+	"slides" : {
+		"placeholder" : {
+			"name" : "Placeholder slide",
+			"file" : "placeholder.html"
+		}
+	},
+	"structures" : {
+	  "default" : {
+			"name" : "Default slideshow",
+			"type" : "slideshow",
+			"content" : ["placeholder"]
+		}
+	}
+}

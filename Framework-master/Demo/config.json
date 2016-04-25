@@ -1,0 +1,10 @@
+{
+  "paths": {
+    "thumbs": "content/img/thumbs/<id>.jpg",
+    "slides": "slides/<id>.html"
+  },
+  "iPlanner": {
+    "bounce": false,
+    "lockedOrientation": "landscape"
+  }
+}

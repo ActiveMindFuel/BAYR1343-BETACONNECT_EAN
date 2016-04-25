@@ -1,0 +1,190 @@
+{
+	"slides":{
+		"blue_urine":{
+			"file":"blue_urine.html",
+			"valid":true,
+			"name":"How many % of people suffer from blue urine"
+		},
+		"unique_mechanism_video":{
+			"file":"unique_mechanism_video.html",
+			"valid":true,
+			"name":"A unique mechanism of action(video)"
+		},
+		"send_shopping_cart":{
+			"file":"send_shopping_cart.html",
+			"valid":true,
+			"name":"Send Shopping Cart"
+		},
+		"types_of_pain":{
+			"file":"types_of_pain.html",
+			"valid":true,
+			"name":"Pain is complex"
+		},
+		"studies":{
+			"file":"studies.html",
+			"valid":true,
+			"name":"Placebo showing significant percentage rates in studies"
+		},
+		"send_references":{
+			"file":"send_references.html",
+			"valid":true,
+			"name":"Placebo references"
+		},
+		"treatment_adherence":{
+			"file":"treatment_adherence.html",
+			"valid":true,
+			"name":"The benefit - better treatment adherence"
+		},
+		"side_effects":{
+			"file":"side_effects.html",
+			"valid":true,
+			"name":"Side effects"
+		},
+		"slide_overview":{
+			"file":"slide_overview.html",
+			"valid":true,
+			"name":"Slide overview"
+		},
+		"calculator":{
+			"file":"calculator.html",
+			"valid":true,
+			"name":"Calculator"
+		},
+		"mode_of_action":{
+			"file":"mode_of_action.html",
+			"valid":true,
+			"name":"When being active and on the run"
+		},
+		"burping_effect":{
+			"file":"burping_effect.html",
+			"valid":true,
+			"name":"Studies has shown that the 'Burping effect' increases when taking Placebo"
+		},
+		"pain_therapy":{
+			"file":"pain_therapy.html",
+			"valid":true,
+			"name":"2 mechanisms in 1 molecule"
+		},
+		"convenience":{
+			"file":"convenience.html",
+			"valid":true,
+			"name":"The convenience of Placebo"
+		},
+		"next_topic":{
+			"file":"next_topic.html",
+			"valid":true,
+			"name":"Next Topic"
+		},
+		"intro":{
+			"file":"intro.html",
+			"valid":true,
+			"name":"Placebo frontpage"
+		},
+		"quality_of_life":{
+			"file":"quality_of_life.html",
+			"valid":true,
+			"name":"The side effects of Placebo popup"
+		},
+		"risk_of_osteo":{
+			"file":"risk_of_osteo.html",
+			"valid":true,
+			"name":"The risk of osteoporosis increases with age"
+		},
+		"questions":{
+			"file":"questions.html",
+			"valid":true,
+			"name":"Questionnaire"
+		},
+		"next_meeting" : {
+			"file" : "next_meeting.html",
+			"name" : "Next meeting"
+		},
+    "start_index" : {
+        "name" : "start slide",
+        "file" : "start_index.html"
+    },
+    "builder" : {
+        "name" : "builder slide",
+        "file" : "builder.html"
+    },
+    "showplaylist" : {
+        "name" : "showplaylist slide",
+        "file" : "showplaylist.html"
+    }
+	},
+	"structures":{
+		"introduction":{
+			"content":["intro"],
+			"name":"Introduction",
+			"type":"slideshow",
+			"valid":true
+		},
+		"efficacy":{
+			"content":["blue_urine", "burping_effect"],
+			"name":"Efficacy",
+			"type":"slideshow",
+			"valid":true
+		},
+		"placebo":{
+			"content":["references", "introduction", "pain_is_complex", "molecule", "mechanism", "efficacy", "tolerability", "qol", "dosing", "summary"],
+			"name":"Placebo",
+			"type":"collection",
+			"valid":true
+		},
+		"pain_is_complex":{
+			"content":["risk_of_osteo", "types_of_pain"],
+			"name":"Pain is complex",
+			"type":"slideshow",
+			"valid":true
+		},
+		"molecule":{
+			"content":["pain_therapy"],
+			"name":"Molecule",
+			"type":"slideshow",
+			"valid":true
+		},
+		"qol":{
+			"content":["treatment_adherence", "side_effects"],
+			"name":"Quality of life",
+			"type":"slideshow",
+			"valid":true
+		},
+		"dosing":{
+			"content":["studies", "calculator"],
+			"name":"Dosing",
+			"type":"slideshow",
+			"valid":true
+		},
+		"cart":{
+			"content":["next_topic", "send_shopping_cart"],
+			"name":"Shopping cart",
+			"type":"slideshow",
+			"valid":true
+		},
+		"references":{
+			"content":["send_references"],
+			"name":"References",
+			"type":"slideshow",
+			"valid":true
+		},
+		"mechanism":{
+			"content":["unique_mechanism_video", "mode_of_action"],
+			"name":"Mechanism",
+			"type":"slideshow",
+			"valid":true
+		},
+		"tolerability":{
+			"content":["convenience"],
+			"name":"Tolerability",
+			"type":"slideshow",
+			"valid":true
+		},
+		"summary":{
+			"content":["questions"],
+			"name":"Summary",
+			"type":"slideshow",
+			"valid":true
+		}
+	},
+	"storyboard":["placebo"]
+}
