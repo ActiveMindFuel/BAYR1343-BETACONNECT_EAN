@@ -1,0 +1,26 @@
+.slide-popup {
+  background-color:#fff;
+  position:absolute;
+  top:50px;
+  opacity:0;
+  -webkit-transition:opacity 1s;
+}
+
+.slide-popup.displaying {
+  opacity:1;
+  z-index: 13;
+  height: 100vh;
+  width:100%;
+}
+.slide-popup.displaying {
+  margin:0;
+  overflow:hidden;
+}
+#transPopup.slide-popup{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#whitePopup.slide-popup{
+	background-color: rgba(255, 255, 255, 0.85);
+	top:0;
+}
